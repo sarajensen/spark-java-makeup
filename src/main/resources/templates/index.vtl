@@ -1,0 +1,21 @@
+#if ($makeups)
+<ul>
+  #foreach ($makeup in $makeups)
+    <li>$makeup.getBrand()</li>
+  #end
+</ul>
+#else
+  <p>Stop going to Sephora!</p>
+#end
+
+<form action="/makeups" method="post">
+  <label for="brand">Brand</label>
+  <input id="brand" name= "brand" type="text">
+  <label for="itemName">Item Name</label>
+  <input id="itemName" name= "itemName" type="text">
+  <label for="price">Price</label>
+  <input id="price" name= "price" type="text">
+
+  <button type="submit" class="btn">Enter</button>
+
+</form>
